@@ -1,0 +1,130 @@
+body {
+    margin-top: 40px;
+    padding: 0;
+    background: #34568B; /* Azul Pantone */
+    font-family: 'Arial', sans-serif;
+    overflow-x: hidden;
+    position: relative;
+  }
+  
+  #conteudo {
+    background-color: #34568B; /* mesmo azul do body */
+    min-height: 100vh;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  #inicio {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #34568B;
+  }
+  
+  #botaoFofo {
+    font-size: 24px;
+    padding: 20px 40px;
+    border: none;
+    border-radius: 25px;
+    background-color: #ff69b4;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+  }
+  
+  #botaoFofo:hover {
+    background-color: #ff85c1;
+  }
+  
+  .escondido {
+    display: none;
+  }
+  
+  .texto-romantico {
+    color: white;
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.6;
+  }
+  .contador {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: white;
+  }
+  
+  .carrossel-moldura {
+    width: 90%;
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+
+  
+.carousel-inner {
+    width: 100%;
+    height: 400px; /* altura fixa para todas as imagens */
+  }
+
+  .carousel-inner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* mantém o aspecto visual bonito sem distorcer */
+    object-position: center; /* centraliza o foco da imagem */
+  }
+  .coracoes {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 10;
+  }
+  
+  .coracao {
+    position: absolute;
+    color: red;
+    animation: cair 4s linear forwards;
+    opacity: 0.8;
+  }
+  
+  @keyframes cair {
+    0% {
+      transform: translateY(-50px);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(100vh);
+      opacity: 0;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .contador {
+      font-size: 18px;
+    }
+  
+    #botaoFofo {
+      font-size: 20px;
+      padding: 15px 30px;
+    }
+  
+    .carrossel {
+      height: 250px;
+    }
+  
+    .texto-romantico {
+      font-size: 1rem;
+    }
+  }
+  
